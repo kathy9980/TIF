@@ -7,4 +7,4 @@ The folders are:
 4. Others
 
 Note:
-  To run the Matlab code, please install the [Mapping Toolbox](https://www.mathworks.com/products/mapping.html)
+1. To reproduce the figures in the paper using Matlab R2024a, please install the [Mapping Toolbox](https://www.mathworks.com/products/mapping.html) and the [Statistics and Machine Learning Toolbox](https://www.mathworks.com/products/statistics.html).
