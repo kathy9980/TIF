@@ -1,13 +1,15 @@
 function batchTIF_pixel(varargin)
 %%----------------------------------------------------
 % Perform Time-sereis-based Image Fusion (TIF) calibration in batch (for individual pixels).
-% Note: we don't need hide_date for this function.
+% 
 % The TIF output includes 
 %       slope, 
 %       intercept,
 %       Rsquared, 
-%       QA. 
+%       Number of valid observation pairs. 
 % We can build time series using these information.  
+%
+% Created by Kexin Song (kexin.song@uconn.edu)
 
 
 %%----------------------------------------------------
