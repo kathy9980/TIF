@@ -25,7 +25,7 @@ The TIF algorithm is designed to enhance the spatial resolution of Landsat 8 ima
 
 ## Installation
 
-To install the TIF package, you can clone the repository and ensure you have the required MATLAB toolboxes the [Mapping Toolbox](https://www.mathworks.com/products/mapping.html) and the [Statistics and Machine Learning Toolbox](https://www.mathworks.com/products/statistics.html).
+To install the TIF package, you can clone the repository and ensure you have the required MATLAB toolboxes: [Mapping Toolbox](https://www.mathworks.com/products/mapping.html) and [Statistics and Machine Learning Toolbox](https://www.mathworks.com/products/statistics.html).
 
 
 ```bash
