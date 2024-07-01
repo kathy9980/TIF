@@ -19,8 +19,8 @@ The TIF algorithm is designed to enhance the spatial resolution of Landsat 8 ima
 
 ## Features
 
-- **Spatial Resolution Enhancement:** Improve Landsat 8 imagery resolution from 30 m to 10 m.
-- **Temporal Consistency:** Harmonize data from different satellite sources to ensure temporal consistency.
+- **Spatial Resolution Enhancement:** Improve Landsat 8 imagery resolution from 30 m to 10 m on any given date.
+- **Sensor Flexibility:** Harmonize data from different satellite sources without bandpass adjustment.
 - **Robust Performance:** Demonstrated robustness to temporal changes and varying land cover types.
 
 ## Installation
@@ -45,6 +45,20 @@ We have included several examples in the examples directory to demonstrate the u
 
 ### Example 1: Basic Usage 
 This example demonstrates the basic usage of the TIF algorithm with a single pixel.
+```matlab
+% Load example data
+landsatData = load('examples/data/landsat_example.mat');
+sentinelData = load('examples/data/sentinel_example.mat');
+
+% Initialize the TIF algorithm
+tifAlgorithm = TIF(landsatData, sentinelData);
+
+% Run the fusion process
+harmonizedData = tifAlgorithm.run();
+
+% Display the results
+imshow(harmonizedData);
+```
 
 
 ### Example 2: Advanced Usage
