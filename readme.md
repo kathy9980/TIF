@@ -22,7 +22,6 @@ The TIF algorithm is designed to enhance the spatial resolution of Landsat 8 ima
 - **Spatial Resolution Enhancement:** Improve Landsat 8 imagery resolution from 30 m to 10 m.
 - **Temporal Consistency:** Harmonize data from different satellite sources to ensure temporal consistency.
 - **Robust Performance:** Demonstrated robustness to temporal changes and varying land cover types.
-- **Comprehensive Metrics:** Evaluation using RMSE, AAD, ERGAS, SSIM, and UIQI metrics to ensure high-quality results.
 
 ## Installation
 
