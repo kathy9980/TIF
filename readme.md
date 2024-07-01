@@ -50,10 +50,21 @@ This example demonstrates the basic usage of the TIF algorithm with a single pix
 ### Example 2: Advanced Usage
 This example shows advanced usage with additional options and parameters.
 
+## Contributing
+We welcome contributions to the TIF project! If you would like to contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix.
+3 .Commit your changes and push the branch to your fork.
+4. Submit a pull request to the main repository.
 
 ## License
-## Acknowledgement
 
+## Acknowledgement
+Please cite this paper.
+
+
+If you have any questions, please contact Zhe Zhu (zhe@uconn.edu) and Kexin Song (kexin.song@uconn.edu) at Department of Natural Resources and the Environment, University of Connecticut.
 
 
 
