@@ -10,7 +10,6 @@ Welcome to the **TIF** repository! This package includes the source code and exa
 - [Usage](#usage)
 - [Examples](#examples)
 - [Contributing](#contributing)
-- [License](#license)
 - [Acknowledgements](#acknowledgements)
 
 ## Overview
@@ -72,8 +71,6 @@ We welcome contributions to the TIF project! If you would like to contribute, pl
 2. Create a new branch for your feature or bugfix.
 3. Commit your changes and push the branch to your fork.
 4. Submit a pull request to the main repository.
-
-## License
 
 ## Acknowledgement
 Please cite this paper.
