@@ -36,7 +36,8 @@ git clone https://github.com/yourusername/TIF.git
 To use the TIF algorithm, follow these steps:
 
 1. Prepare your Landsat 8 and Sentinel-2 time series data.
-2. Use the TIF algorithm to fuse the data and produce harmonized 10 m HLS data.
+2. Conduct the TIF algorithm to obtain TIF coefficient for each spectral band.
+3. Use the TIF coefficients to fuse the Landsat data and produce 10 m HLS time series.
 
 Here's an example script to get you started:
 
