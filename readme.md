@@ -69,7 +69,7 @@ We welcome contributions to the TIF project! If you would like to contribute, pl
 
 1. Fork the repository.
 2. Create a new branch for your feature or bugfix.
-3 .Commit your changes and push the branch to your fork.
+3. Commit your changes and push the branch to your fork.
 4. Submit a pull request to the main repository.
 
 ## License
