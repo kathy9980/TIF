@@ -12,8 +12,8 @@ function [pt_lon,pt_lat]=convertRowCol2LatLon(pt_row, pt_col, folderpath_img)
 
 %% Convert row/col to X/Y
 pro = R.ProjectedCRS;
-% [X,Y] = pixcenters(R,size(img));  % ks: this function was removed.
-[X,Y] = worldGrid(R);
+[X,Y] = pixcenters(R,size(img));  % ks: this function was removed by Matlab, buth the worldGrid didn't work properly - incorrect answers.
+% [X,Y] = worldGrid(R);
 pt_x = X(pt_col);
 pt_y = Y(pt_row);  
 
