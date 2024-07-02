@@ -46,18 +46,25 @@ We have included several examples in the examples directory to demonstrate the u
 ### Example 1: Basic Usage 
 This example demonstrates the basic usage of the TIF algorithm with a single pixel.
 ```matlab
-% Load example data
-landsatData = load('examples/data/landsat_example.mat');
-sentinelData = load('examples/data/sentinel_example.mat');
+addpath(genpath('path_to_TIF_functions')); 
 
-% Initialize the TIF algorithm
-tifAlgorithm = TIF(landsatData, sentinelData);
+%% Load example data
+data = load('Examples/Data/T18TXM_r03007c09955.mat');
+L8_metadata = load('Examples/Data/L8_metadata.mat');
+S2_metadata = load('Examples/Data/S2_metadata.mat');
 
-% Run the fusion process
-harmonizedData = tifAlgorithm.run();
+%% Initialize the TIF algorithm 
+TIF_coefficient = runTIFSinglePixel(data, L8_metadata, S2_metadata, 'do_plot', true);
 
-% Display the results
-imshow(harmonizedData);
+%% Run the fusion process
+[clrx_L, prediction, clrx_S, clry_S] = predictClearSurfaceReflectanceTS(data, TIF_coefficient);
+
+%% Merge Sentinel-2 and the predction values
+[clrx_HLS, HLS_10m] = mergeL10S10TimeSeries(clrx_S, clry_S, clrx_L, prediction);
+
+%% Display the results
+band_plot = 6; 
+plot10mHLSTimeSeries(clrx_S, clry_S, clrx_L, prediction, band_plot);
 ```
 
 
