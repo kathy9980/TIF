@@ -19,8 +19,9 @@ The TIF algorithm is designed to enhance the spatial resolution of Landsat 8 ima
 ## Features
 
 - **Spatial Resolution Enhancement:** Improve Landsat 8 imagery resolution from 30 m to 10 m on any given date.
-- **Sensor Flexibility:** Harmonize data from different satellite sources without bandpass adjustment.
+- **Pixel-level Sensor-to-sensor Adjustment:** Harmonize data from different satellite sources without bandpass adjustment.
 - **Robust Performance:** Demonstrated robustness to temporal changes and varying land cover types.
+- **Parallel computing Support:** Accelerated by using 100+ computing cores.
 
 ## Installation
 
