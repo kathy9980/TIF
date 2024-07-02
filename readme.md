@@ -45,7 +45,7 @@ Here's an example script to get you started:
 We have included several examples in the examples directory to demonstrate the usage of the TIF algorithm. These examples cover different scenarios and use cases, helping you understand how to apply the algorithm to your own data.
 
 ### Example 1: Basic Usage 
-This example demonstrates the basic usage of the TIF algorithm on a single pixel.
+[Example 1_BasicUsage](https://github.com/kathy9980/TIF/blob/main/Examples/Example1_BasicUsage.m) demonstrates the basic usage of the TIF algorithm on a single pixel. Here's a brief overview of the script.
 ```matlab
 addpath(genpath('path_to_TIF_functions')); 
 
@@ -70,7 +70,7 @@ plot10mHLSTimeSeries(clrx_S, clry_S, clrx_L, prediction, band_plot);
 
 
 ### Example 2: Advanced Usage
-This example shows advanced usage with additional options and parameters.
+[Example 2_Advanced Usage](https://github.com/kathy9980/TIF/blob/main/Examples/Example2_AdvancedUsage.m) shows advanced TIF conduction with user-defined parameters.
 ```
 %% Apply modified paramters of t_threshold, maxK, regress_method, and wfun
 TIF_coefficient = runTIFSinglePixel(data, L8_metadata, S2_metadata,...
