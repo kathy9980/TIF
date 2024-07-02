@@ -72,6 +72,10 @@ plot10mHLSTimeSeries(clrx_S, clry_S, clrx_L, prediction, band_plot);
 ### Example 2: Advanced Usage
 This example shows advanced usage with additional options and parameters.
 ```
+% Modify paramters t_threshold, maxK, regress_method, and wfun
+TIF_coefficient = runTIFSinglePixel(data, L8_metadata, S2_metadata,...
+    't_threshold',1,'maxK',1,'regress_method','robustfit','wfun','Fair',...
+    'msg', true,'do_plot', true,'save_figure',false);
 ```
 
 ### Example 3. TIF with Multiple Computing Cores
