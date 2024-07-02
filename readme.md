@@ -71,7 +71,7 @@ plot10mHLSTimeSeries(clrx_S, clry_S, clrx_L, prediction, band_plot);
 
 ### Example 2: Advanced Usage
 [Example 2_Advanced Usage](https://github.com/kathy9980/TIF/blob/main/Examples/Example2_AdvancedUsage.m) shows advanced TIF conduction with user-defined parameters.
-```
+```matlab
 %% Apply modified paramters of t_threshold, maxK, regress_method, and wfun
 TIF_coefficient = runTIFSinglePixel(data, L8_metadata, S2_metadata,...
     't_threshold',1,'maxK',1,'regress_method','robustfit','wfun','Sqrt',...
