@@ -44,7 +44,7 @@ Here's an example script to get you started:
 We have included several examples in the examples directory to demonstrate the usage of the TIF algorithm. These examples cover different scenarios and use cases, helping you understand how to apply the algorithm to your own data.
 
 ### Example 1: Basic Usage 
-This example demonstrates the basic usage of the TIF algorithm with a single pixel.
+This example demonstrates the basic usage of the TIF algorithm on a single pixel.
 ```matlab
 addpath(genpath('path_to_TIF_functions')); 
 
@@ -56,7 +56,7 @@ S2_metadata = load('Examples/Data/S2_metadata.mat');
 %% Initialize the TIF algorithm 
 TIF_coefficient = runTIFSinglePixel(data, L8_metadata, S2_metadata, 'do_plot', true);
 
-%% Run the fusion process
+%% Run the fusion process to the time series
 [clrx_L, prediction, clrx_S, clry_S] = predictClearSurfaceReflectanceTS(data, TIF_coefficient);
 
 %% Merge Sentinel-2 and the predction values
