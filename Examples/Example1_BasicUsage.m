@@ -13,8 +13,7 @@ close all; % Close all open figures
 
 %% Add the TIF functions to your MATLAB path
 % Ensure the path to the TIF functions is correctly set before running the script
-addpath(genpath('/Users/kexinsong/Library/CloudStorage/OneDrive-UniversityofConnecticut/Documents/ImageFusion/TIF'));
-% addpath(genpath('path_to_TIF_functions')); 
+addpath(genpath('path_to_TIF_functions')); 
 
 %% Load example data
 % Load data required for running the TIF algorithm
