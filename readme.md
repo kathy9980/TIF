@@ -71,6 +71,13 @@ plot10mHLSTimeSeries(clrx_S, clry_S, clrx_L, prediction, band_plot);
 
 ### Example 2: Advanced Usage
 This example shows advanced usage with additional options and parameters.
+```
+```
+
+### Example 3. TIF HPC usage
+This example shows how to perform TIF algorithm with imagery time series (spatial range: 6 km by 6 km, temporal range: 2013-2021) with UConn HPC.
+```
+```
 
 ## Contributing
 We welcome contributions to the TIF project! If you would like to contribute, please follow these steps:
