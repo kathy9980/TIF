@@ -74,7 +74,7 @@ This example shows advanced usage with additional options and parameters.
 ```
 ```
 
-### Example 3. TIF HPC usage
+### Example 3. TIF with Multiple Computing Cores
 This example shows how to perform the TIF algorithm with imagery time series (spatial range: 6 km by 6 km) on UConn HPC.
 ```
 ```
