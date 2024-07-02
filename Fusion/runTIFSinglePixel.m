@@ -1,12 +1,35 @@
 function TIF_coefficient = runTIFSinglePixel(data,L8_metadata,S2_metadata,varargin)
-% Conduct Time-series based Image Fusing (TIF) and export coefficients, 
-% i.e. slope and intercept.
-%   
+%%-------------------------------------------------------------------------
+% runTIFSinglePixel()conducts Time-series based Image Fusing (TIF) algorithm and export coefficients. 
+% 
+% This function performs Time-series based Image Fusing (TIF) using input 
+% time series data from Landsat and Sentinel-2. It matches clear observations 
+% between the two datasets, performs k-means clustering, and builds weighted 
+% linear models to derive the relationship between them. The function outputs 
+% the TIF coefficients, including slopes, intercepts, number of observation
+% pairs, R-squared values, and optionally plots the time series and saves the results.
+%
+% Inputs:
+%   - data: Struct containing Landsat and Sentinel-2 time series data.
+%   - L8_metadata: Struct containing Landsat metadata.
+%   - S2_metadata: Struct containing Sentinel-2 metadata.
+%   - varargin: Additional optional parameters for various processing options.
+%
+% Outputs:
+%   - TIF_coefficient: Struct containing the calculated TIF coefficients for 
+%     each spectral band.
+%
+% Example usage:
+%   TIF_coefficient = runTIFSinglePixel(data, L8_metadata, S2_metadata, 'task', 1, 'ntasks', 1, 'msg', true);
+%
+% Author: Kexin Song (kexin.song@uconn.edu)
+% Date: 2024/07/01
+%
 % ks 20230816: add slope, intercept, and rsuqred for obs pairs<4.
 % ks 20231109: test weight functions (1/sqrt(d), 1/d, 1/d^2).
 % ks 20231212: add lines to correct cloud mask issue (T10SFG) 251-255 to
 % 0-4.
-
+%%-------------------------------------------------------------------------
 warning('off','all')
 close all;
 addpath(fullfile(pwd, 'Fusion'));
