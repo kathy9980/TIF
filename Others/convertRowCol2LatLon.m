@@ -1,26 +1,30 @@
-function [pt_lon,pt_lat]=convertRowCol2LatLon(pt_row, pt_col, folderpath_img)
-% This fuction will convert row/col in to lat/lon
+function [pt_lon,pt_lat]=convertRowCol2LatLon(pt_row, pt_col, R)
+%%-------------------------------------------------------------------------
+% This function converts row and column indices of a pixel into latitude 
+% and longitude coordinates.
+% 
 % Input:
-%   pt_row: row index of the input pixel.
-%   pt_col: column index of the input pixel.
-%   folderpath_img: directory of the raster image.
+%   pt_row: Row index of the input pixel.
+%   pt_col: Column index of the input pixel.
+%   R: Spatial referencing object associated with the raster image.
+% 
 % Output:
-%   pt_lon: longitude (in deg) of the input pixel.
-%   pt_lat: latitude (in deg) of the input pixel.
+%   pt_lon: Longitude (in degrees) of the input pixel.
+%   pt_lat: Latitude (in degrees) of the input pixel.
+%
+% Author: Kexin Song
+% 20240701 ks : Replaced 'pixcenters()' with 'worldGrid()'
+%%-------------------------------------------------------------------------
 
-[~,R] = readgeoraster(folderpath_img);
+    %% Convert row/col to X/Y
+    [X, Y] = worldGrid(R);
+    pt_x = X(pt_row, pt_col);
+    pt_y = Y(pt_row, pt_col);
 
-%% Convert row/col to X/Y
-pro = R.ProjectedCRS;
-[X,Y] = pixcenters(R,size(img));  % ks: this function was removed by Matlab, buth the worldGrid didn't work properly - incorrect answers.
-% [X,Y] = worldGrid(R);
-pt_x = X(pt_col);
-pt_y = Y(pt_row);  
-
-
-%% Covert X/Y to lat/lon
-[pt_lat,pt_lon] = projinv(pro,pt_x,pt_y);
-fprintf('The lat/lon of input point is: %f,%f.\n', pt_lat, pt_lon);
+    
+    %% Covert X/Y to lat/lon
+    [pt_lat,pt_lon] = projinv(R.ProjectedCRS,pt_x,pt_y);
+    fprintf('The lat/lon of input point is: %f,%f.\n', pt_lat, pt_lon);
 
 end
 
