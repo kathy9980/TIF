@@ -115,7 +115,7 @@ We welcome contributions to the TIF project! If you would like to contribute, pl
 4. Submit a pull request to the main repository.
 
 ## Acknowledgement
-Reference:
+Reference: Our research paper **TIF: Time-series-based Image Fusion Algorithm** has been submitted to the *Remote Sensing of Environmet* for review.
 
 
 If you have any questions, please contact Zhe Zhu (zhe@uconn.edu) and Kexin Song (kexin.song@uconn.edu) at Department of Natural Resources and the Environment, University of Connecticut.
