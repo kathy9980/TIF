@@ -78,7 +78,7 @@ TIF_coefficient = runTIFSinglePixel(data, L8_metadata, S2_metadata,...
     'msg', true,'do_plot', true,'save_figure',false);
 ```
 
-### Example 3. TIF with Multiple Computing Cores
+### Example 3. TIF with Parallel Computing Techniques
 The [bashTIF.sh](https://github.com/kathy9980/TIF/blob/main/HPCJobs/batchTIF.sh) shows how to perform the TIF algorithm with imagery time series on the UConn HPC. Here's a brief overview of the script.
 
 ```bash
