@@ -79,7 +79,11 @@ TIF_coefficient = runTIFSinglePixel(data, L8_metadata, S2_metadata,...
 ```
 
 ### Example 3. TIF with Multiple Computing Cores
-This example shows how to perform the TIF algorithm with imagery time series (spatial range: 600 x 600 pixels) on UConn HPC. Here's the bash script that performs TIF on line data using 60 cores. The line data contains 10 rows with 10980 cols on each row.
+The [bashTIF.sh](https://github.com/kathy9980/TIF/blob/main/HPCJobs/batchTIF.sh) shows how to perform the TIF algorithm with imagery time series on UConn HPC. You can submit this to using command below.
+```linux
+submit batchTIF.sh
+```
+In this bash file, we applied the TIF algorithm to a subarea of T18TXM using 60 cores. Note: The input data, dervied from the [StackS2Data.m](), are in the BIP format. Each line contains the time series of a subset image with 10 rows with 10980 cols on each row.
 ```bash
 #!/bin/bash
 #SBATCH --partition=general
