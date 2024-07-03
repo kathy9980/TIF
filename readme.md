@@ -72,15 +72,29 @@ plot10mHLSTimeSeries(clrx_S, clry_S, clrx_L, prediction, band_plot);
 ### Example 2: Advanced Usage
 [Example 2_Advanced Usage](https://github.com/kathy9980/TIF/blob/main/Examples/Example2_AdvancedUsage.m) shows advanced TIF conduction with user-defined parameters.
 ```matlab
-%% Apply modified paramters of t_threshold, maxK, regress_method, and wfun
+%% TIF with modified paramters of t_threshold, maxK, regress_method, and wfun
 TIF_coefficient = runTIFSinglePixel(data, L8_metadata, S2_metadata,...
     't_threshold',1,'maxK',1,'regress_method','robustfit','wfun','Sqrt',...
     'msg', true,'do_plot', true,'save_figure',false);
 ```
 
 ### Example 3. TIF with Multiple Computing Cores
-This example shows how to perform the TIF algorithm with imagery time series (spatial range: 6 km by 6 km) on UConn HPC.
-```
+This example shows how to perform the TIF algorithm with imagery time series (spatial range: 600 x 600 pixels) on UConn HPC. Here's the bash script that performs TIF on line data using 60 cores. The line data contains 10 rows with 10980 cols on each row.
+```bash
+#!/bin/bash
+#SBATCH --partition=general
+#SBATCH --account=add-your-account
+#SBATCH --ntasks=2
+#SBATCH --array=1-60
+#SBATCH --output=TIF_T18TXM.out
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=add-your-email-address
+
+echo $SLURMD_NODENAME
+cd add-your-TIF-directory
+
+module load matlab
+matlab -nojvm -nodisplay -nosplash -singleCompThread -r "batchTIF('task',$SLURM_ARRAY_TASK_ID, 'ntasks',$SLURM_ARRAY_TASK_MAX, 'ARDTiles','18TXM','hide_date','2021-06-16','analysis_scale','30to10');exit"
 ```
 
 ## Contributing
