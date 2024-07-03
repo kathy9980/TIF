@@ -79,7 +79,7 @@ TIF_coefficient = runTIFSinglePixel(data, L8_metadata, S2_metadata,...
 ```
 
 ### Example 3. TIF with Multiple Computing Cores
-The [bashTIF.sh](https://github.com/kathy9980/TIF/blob/main/HPCJobs/batchTIF.sh) shows how to perform the TIF algorithm with imagery time series on UConn HPC. Here's a brief of the script.
+The [bashTIF.sh](https://github.com/kathy9980/TIF/blob/main/HPCJobs/batchTIF.sh) shows how to perform the TIF algorithm with imagery time series on the UConn HPC. Here's a brief overview of the script.
 
 ```bash
 #!/bin/bash
@@ -98,7 +98,7 @@ module load matlab
 matlab -nojvm -nodisplay -nosplash -singleCompThread -r "batchTIF('task',$SLURM_ARRAY_TASK_ID, 'ntasks',$SLURM_ARRAY_TASK_MAX, 'ARDTiles','18TXM','hide_date','2021-06-16','analysis_scale','30to10');exit"
 ```
 
-In this bash file, we applied the TIF algorithm to a subarea of T18TXM using 60 cores. Note: The input data, dervied from the [StackS2Data.m](), are in the BIP format. Each line contains the time series of a subset image with 10 rows with 10980 cols on each row.
+In this bash file, we applied the TIF algorithm to a subarea of T18TXM using 60 cores. Note: The input data area in the BIP format. Each line contains the time series of a subset image with 10 rows and 10980 cols on each row. To prepare your own input, run the [StackS2Data.m]().
 
 
 To submit a HPC job, use the command below.
