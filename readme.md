@@ -42,7 +42,7 @@ To use the TIF algorithm, follow these steps:
 Here's an example script to get you started:
 
 ## Examples
-We have included several examples in the examples directory to demonstrate the usage of the TIF algorithm. These examples cover different scenarios and use cases, helping you understand how to apply the algorithm to your own data.
+We have included several demos in the examples directory to demonstrate the usage of the TIF algorithm. These examples cover different scenarios and use cases, helping you understand how to apply the algorithm to your own data.
 
 ### Example 1: Basic Usage 
 [Example 1_BasicUsage](https://github.com/kathy9980/TIF/blob/main/Examples/Example1_BasicUsage.m) demonstrates the basic usage of the TIF algorithm on a single pixel. Here's a brief overview of the script.
