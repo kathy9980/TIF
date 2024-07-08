@@ -35,7 +35,7 @@ git clone https://github.com/yourusername/TIF.git
 ## Usage
 To use the TIF algorithm, follow these steps:
 
-1. Prepare your Landsat 8 and Sentinel-2 time series data.
+1. Prepare your Landsat 8 and Sentinel-2 time series data (save to **pixels** for sample-based analysis, save to **lines** for ROI-based analysis).
 2. Conduct the TIF algorithm to obtain TIF coefficient for each spectral band.
 3. Use the TIF coefficients to fuse the Landsat data and produce 10 m HLS time series.
 
