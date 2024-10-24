@@ -12,12 +12,13 @@ close all; % Close all open figures
 
 %% Add the TIF functions to your MATLAB path
 % Ensure the path to the TIF functions is correctly set before running the script
-addpath(genpath('path_to_TIF_functions')); 
+% addpath(genpath('path_to_TIF_functions')); 
+addpath(genpath('C:/TIF/')); 
 
 %% Load example data
 % Load data required for running the TIF algorithm
 % Replace 'Examples/Data/T18TXM_r03007c09955.mat' with the path to your data file
-data = load('Examples/Data/T18TXM_r03007c09955.mat');
+data = load('Examples/Data/T18TXM_Lat_42.1566_Lon_-72.5847.mat');
 
 %% Load metadata for Landsat 8 and Sentinel-2
 % These metadata files contain necessary information about the satellite images
@@ -27,7 +28,7 @@ S2_metadata = load('Examples/Data/S2_metadata.mat');
 %% Initialize the TIF algorithm with default options
 % This function calculates the TIF coefficients for the given data
 TIF_coefficient = runTIFSinglePixel(data, L8_metadata, S2_metadata,...
-    't_threshold',1,'maxK',1,'regress_method','robustfit','wfun','Fair',...
+    't_threshold',5,'maxK',1,'regress_method','robustfit','wfun','Fair',...
     'msg', true,'do_plot', true,'save_figure',false);
 
 %% Apply the coefficient to obtain clear Landsat observations at 10 m grids
