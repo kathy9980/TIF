@@ -59,7 +59,7 @@ addParameter(p,'msg', true);                    % display info
 
 addParameter(p,'t_threshold',16);               % default observation-matching threshold is +- 16 day(s).
 addParameter(p,'regress_method','robustfit');   % default linear regression method is 'robustfit'. others are 'linear', 'multi-variable-robustfit', 'multi-variable-linear'.
-addParameter(p,'maxK',2);                       % default value for the maximum K-means cluster is 2.    
+addParameter(p,'maxK',3);                       % default value for the maximum K-means cluster is 2.    
 addParameter(p,'wfun','Fair');                  % default is "Fair". Options: Fair, Cauchy, Sqrt
 
 addParameter(p,'do_plot',false);
